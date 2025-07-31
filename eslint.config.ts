@@ -6,7 +6,11 @@ export default defineConfig([
   {
     files: ["**/*.{js,mjs,ts,mts,cts}"],
     plugins: { js },
-    extends: ["js/recommended"],
+    extends: [
+      "js/recommended",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+    ],
     languageOptions: { globals: globals.browser },
     rules: {
       "prefer-const": "error",
