@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start:dev": "tsx watch ./src/index.ts",
+    "start:dev": "tsx --env-file=EnvConfig/.env.dev --watch ./src/index.ts",
     "build": "node esbuild.config.js",
     "start": "node dist/out.cjs"
   },
@@ -13,6 +13,7 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
+    "jet-logger": "^2.0.1",
     "jiti": "^2.5.1",
     "morgan": "^1.10.1"
   },
