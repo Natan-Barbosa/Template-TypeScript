@@ -1,7 +1,6 @@
 import { Application, Request, Response } from "express";
 import express from "express";
 import morgan from "morgan";
-import { hello } from "@/services/test";
 import { logger } from "./config/jet.logger.config";
 import * as dotenv from "dotenv";
 import { enviroment } from "./constants/enviroment";
@@ -17,7 +16,7 @@ if (envConfig == enviroment.dev) {
 }
 
 app.get("/", (_req: Request, res: Response) => {
-  res.send(hello());
+  res.send("Hello World");
 });
 
 app.listen(port, () => {
