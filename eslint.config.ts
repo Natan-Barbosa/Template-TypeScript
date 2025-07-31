@@ -14,7 +14,7 @@ export default defineConfig([
     rules: {
       "prefer-const": "error",
       "no-const-assign": "error",
-      "no-unused-vars": "warn",
+      "no-unused-vars": "off",
       camelcase: "error",
       "default-case": "warn",
       "no-console": "warn",
@@ -22,6 +22,10 @@ export default defineConfig([
       "no-empty-function": "error",
       "no-var": "error",
       "no-undef": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/prefer-as-const": "error",
+      "@typescript-eslint/no-inferrable-types": "warn",
     },
   },
 ]);
