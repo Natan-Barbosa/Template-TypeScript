@@ -6,7 +6,9 @@
   "scripts": {
     "start:dev": "tsx --watch ./src/index.ts",
     "build": "node esbuild.config.js",
-    "start": "node dist/out.cjs"
+    "start": "node dist/out.cjs",
+    "lint": "npx eslint ./src",
+    "types": "tsc --noEmit"
   },
   "author": "",
   "license": "ISC",
