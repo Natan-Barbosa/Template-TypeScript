@@ -4,7 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch ./src/index.ts"
+    "start:dev": "tsx watch ./src/index.ts",
+    "build": "node esbuild.config.js",
+    "start": "node dist/out.cjs"
   },
   "author": "",
   "license": "ISC",
