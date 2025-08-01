@@ -4,12 +4,14 @@ import morgan from "morgan";
 import { logger } from "./config/jet.logger.config";
 import * as dotenv from "dotenv";
 import { enviroment } from "./constants/enviroment";
+import bodyParser from "body-parser";
 
 dotenv.config();
 const envConfig = process.env.NODE_ENV || enviroment.dev;
 
 const app: Application = express();
 const port = 3000;
+app.use(bodyParser.json());
 
 if (envConfig == enviroment.dev) {
   app.use(morgan("common"));
